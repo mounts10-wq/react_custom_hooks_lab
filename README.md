@@ -1,5 +1,50 @@
 # Lab: Form Storage
 
+## Overview
+This React application demonstrates how to persist form input values between page refreshes using a custom hook and the browser's `localStorage`.
+
+The project focuses on:
+- Custom Hooks
+- Reusability
+- Form state persistence
+- Package management with npm scripts
+
+## Features
+- Users can enter their name and service number
+- Data remains available after refreshing the browser
+- Persistence is handled with a reusable custom hook: `useLocalStorage`
+
+## Problem Statement
+As a user, I should be able to:
+- Input data in the form
+- Refresh the page
+- Still see my previously entered data
+
+## Solution
+The application uses a custom React hook, `useLocalStorage`, to:
+- Read saved values from `localStorage`
+- Initialize component state from saved values
+- Automatically save updates back to `localStorage`
+
+## Technologies Used
+- React
+- Vite
+- Vitest
+- Testing Library
+- localStorage Web API
+
+## Project Structure
+```bash
+src/
+  components/
+    App.jsx
+    Form.jsx
+  hooks/
+    useLocalStorage.js
+  __tests__/
+
+# Lab: Form Storage
+
 ## Overview  
 Now that we’ve covered the basics of creating custom hooks, let’s use our skills to implement a popular feature when it comes to user convenience. You are working with a repair company and you want the user to be able to keep the inputted form data between refreshes. They don’t want to store it within a `db.json` file as that is less secure, however, we can use the user's local storage to store the data and create a custom hook in order to manipulate the local storage.
 
